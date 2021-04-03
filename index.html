@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>My name is ${answers.name}</h1>
+            <h2>I live in ${answer.location}</h2>
+            <h2>Here's a little information about me: ${answers.bio}</h2>
+            <p>If you want to connect with me via linkedin, here's my url: ${answers.linkedin}</p>
+            <p>My Github user name is: ${answers.github}</p>
+        </div>
+    </div>
+</body>
+</html>;
+
+<inquirer>
+    .prompt(questions)
+    .then((data)=>{
+        const filename = `${data.name.toLowerCase().split(' ').join('')}.html`;
+
+        fs.writeFile(filename, generateHTML(data), (err) => 
+        err ? console.log(err) : console.log('Success!')
+        );
+    });
