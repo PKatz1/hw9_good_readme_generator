@@ -1,6 +1,6 @@
-# test project
+# Title
 **Description**
-it sucks
+this is a project about nothing
 
 **Table of Contents**
 undefined
@@ -9,10 +9,10 @@ undefined
 undefined
 
 **Testing Criterion**
-none
+To be determined
 
 **Contact Information**
-joe@joemama.com
+pkatz@finkkatz.com
 
 **GitHub Username**
 {data.github}
